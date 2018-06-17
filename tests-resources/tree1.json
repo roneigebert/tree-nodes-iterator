@@ -1,0 +1,13 @@
+{
+  "name": "Ronei",
+  "languages": [
+    {
+      "name": "Java",
+      "isGood": "YES"
+    },
+    {
+      "name": "Python",
+      "isGood": "YES"
+    }
+  ]
+}
