@@ -35,11 +35,6 @@ public class LinkedElementAsValue implements LinkedElement {
     }
 
     @Override
-    public Object value() {
-        return value;
-    }
-
-    @Override
     public Object getValue() {
         return value;
     }

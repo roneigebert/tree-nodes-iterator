@@ -34,11 +34,6 @@ public class LinkedElementAsList implements LinkedElement {
     }
 
     @Override
-    public Object value() {
-        return value;
-    }
-
-    @Override
     public Object getValue() {
         throw new RuntimeException();
     }

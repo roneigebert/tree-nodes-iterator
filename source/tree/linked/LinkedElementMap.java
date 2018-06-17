@@ -6,14 +6,12 @@ import java.util.Map;
 public class LinkedElementMap implements LinkedElement {
 
     final LinkedElement previous;
-    final Map value;
     final Iterator<Map.Entry> iterator;
     Map.Entry currentEntry;
 
     public LinkedElementMap(LinkedElement previous, Map value) {
         this.previous = previous;
-        this.value = value;
-        this.iterator = ((Map)value).entrySet().iterator();
+        this.iterator = value.entrySet().iterator();
     }
 
     public static LinkedElement of(LinkedElement previous, Map map) {
@@ -34,11 +32,6 @@ public class LinkedElementMap implements LinkedElement {
     public LinkedElement next() {
         currentEntry = iterator.next();
         return LinkedElementFactory.of( this, currentEntry.getValue() );
-    }
-
-    @Override
-    public Object value() {
-        return value;
     }
 
     @Override
